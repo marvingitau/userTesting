@@ -39,6 +39,7 @@
                           </dd>
                           
                       </dl> --}}
+                      
                       <table class="" style="width:100%">
                         
                         <tr>
@@ -47,14 +48,14 @@
                         </tr>
                         @foreach ($users as $user)
                         <tr>
-                        <td><a href="#">{{ $user->name }}</a></td>
+                        <td><a href="/editUser/{{ $user->id }}">{{ $user->name }}</a></td>
                           <td>
                             @if($user->status==1)
                                 Admin
                             @endif
                             @if($user->status==2)
                                  KMRC
-                            @endif
+                            @endif  
                             @if($user->status==3)
                                  3rdParty/HR
                             @endif
@@ -66,6 +67,7 @@
                         </tr>
                         @endforeach
                       </table> 
+                    </form>
                       {{-- {{ $user->name }} <br> --}}
                   {{-- @endforeach --}}
                 </div>
